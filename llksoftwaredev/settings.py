@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
+    'contact.apps.ContactConfig'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# emails
+DEFAULT_FROM_EMAIL = "kkadzi25@gmail.com"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
