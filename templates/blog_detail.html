@@ -2,13 +2,11 @@
 
 {% block content %}
 
-{% for post in post_list %}
-
+    <h4><a href="{% url 'blog'%}">Back to Blog</a></h4>
     <div class="post-entry">
-    <h3><a href="{{ post.get_absolute_url }}">{{ post.title}}</a></h3>
-    <p>{{ post.get_absolute_url }}</p>
+    <h3>{{ post.title}}</h3>
     <p>{{ post.body }}</p>
     <p>{{ post.author }}</p>
     </div>
-{% endfor %}
+
 {% endblock content %}
