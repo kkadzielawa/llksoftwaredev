@@ -5,5 +5,5 @@ from .views import BlogPageView, BlogDetailView
 
 urlpatterns = [
     path('', BlogPageView.as_view(), name = 'blog'),
-    path('<int:pk>/', BlogDetailView.as_view(), name = 'blog_detail'),
+    path('<slug:slug>/', BlogDetailView.as_view(), name = 'blog_detail'),
 ]
