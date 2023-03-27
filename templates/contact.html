@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <h1>Contact Me</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="form-actions">
-      <button type="submit">Send</button>
-    </div>
-</form>
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <form class="" method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="form-actions">
+        <button class="btn btn-success" type="submit">Send</button>
+      </div>
+  </form>
+  </div>
+</div>
 
 {% endblock content %}

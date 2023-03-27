@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #3rd party
+    'crispy_forms',
+    'crispy_bootstrap5',
+    #internal
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
     'contact.apps.ContactConfig',
@@ -130,3 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # emails
 DEFAULT_FROM_EMAIL = "kkadzi25@gmail.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+#Bootstrap
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5" 
+CRISPY_TEMPLATE_PACK = "bootstrap5" 
