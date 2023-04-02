@@ -39,6 +39,7 @@ PyYAML==5.4.1
 requests==2.25.1
 six==1.15.0
 sqlparse==0.4.3
+stripe==5.4.0
 texttable==1.6.3
 toml==0.10.2
 tzdata==2022.7
