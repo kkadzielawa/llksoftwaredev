@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
     <h4><a href="{% url 'blog'%}">Back to Blog</a></h4>
@@ -8,5 +10,18 @@
     <p>{{ post.body }}</p>
     <p>{{ post.author }}</p>
     </div>
+
+    <hr>
+    <h4>Comments</h4>
+    {% for comment in post.comment_set.all %}
+    <p>{{ comment.author }} &middot; {{ comment }}</p>
+    {% endfor %}
+    <hr>
+
+    <h4>Add a comment</h4>
+    <form action="" method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-success ml-2" type="submit">Save</button>
+    </form>
 
 {% endblock content %}
